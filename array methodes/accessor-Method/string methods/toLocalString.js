@@ -3,4 +3,4 @@
 let arr=[1,2,3,4,5];    
 let str=arr.toLocaleString("usd ");                           
 console.log(str);
-console.log(typeof str);            
+console.log(typeof str);           
