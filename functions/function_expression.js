@@ -10,7 +10,8 @@
 // 1. Function expressions can be stored in variables, arrays, or objects.
 // 2. They can be passed as arguments to other functions (callbacks).
 // 3. They are not hoisted, meaning they cannot be called before they are defined.
-
+// iife (immediately invoked function expression)is a function expression that is executed immediately
+//  after it is defined.
 // anonymous function expression:
 const sayHello = function(name) {
     console.log("Hello, " + name + "!");

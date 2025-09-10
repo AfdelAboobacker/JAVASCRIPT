@@ -1,3 +1,4 @@
+// promise with prompt is used to handle asynchronous operations in JavaScript with user input
 let myPromise = new Promise((resolve, reject) => {
   const prompt = require("prompt-sync")();
   let success = prompt("Enter true or false:");

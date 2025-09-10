@@ -1,0 +1,2 @@
+The rest-parameters is allows a function to acceept infinite number of arguments as an array.
+used when the number of arguments  is unknown.
