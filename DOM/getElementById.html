@@ -1,0 +1,21 @@
+<!-- getElementById is used to select an element by its ID -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <h1 id="mainHeading">welcome!</h1>
+    <button onclick="changeHeading()">change heading</button>
+    <script>
+        function changeHeading(){
+            // use getElementById to acces the heading
+            const heading=document.getElementById("mainHeading");
+            // change the text-content of the haeding
+            heading.textContent="hello ,you clicked the button";
+        }
+    </script>
+</body>
+ </html>

@@ -1,0 +1,5 @@
+document object model 
+dom is a programming interface provided by browser,
+it allows javascript to intract with and manipulate the structure,style and content of webpage.
+programming interface is a set of rules ,tools and protocols that allows software to communicate with each other.
+the dom represents the webpage as a tree-like structure where each node is an object representing a part of the document such as an element,attribute or text.

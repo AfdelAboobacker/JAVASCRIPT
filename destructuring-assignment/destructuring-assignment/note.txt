@@ -1,0 +1,21 @@
+1. Destructuring assignment is a feature in js that allows you to unpack the values from arrays or properties from objects into seperate variables.
+
+2. used to seperate properties and elements.
+
+3. You can use array destructuring to assign multiple variables at once from an array: 
+	const [a, b] = [1, 2];
+
+4. Object destructuring allows you to extract properties by name: 
+	const {x, y} = {x: 10, y: 20};
+
+5. You can set default values during destructuring: 
+	const [a = 5, b = 10] = [1]; // a=1, b=10
+
+6. Nested destructuring is possible for arrays and objects.
+
+7. Destructuring can be used in function parameters to directly extract values.
+
+8. Rest syntax (...) can be used with destructuring to collect remaining items.
+
+9. Useful for swapping variables: 
+	[a, b] = [b, a];
