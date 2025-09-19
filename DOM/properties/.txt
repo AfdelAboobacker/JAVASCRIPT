@@ -1,0 +1,1 @@
+textconten,innerText,innerHtml:are properties are used to access or change content inside an element
