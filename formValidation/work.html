@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spa Client Intake Form</title>
+  <link rel="stylesheet" href="work.css">
+</head>
+<body>
+  <div class="form-container">
+    <h1>Spa Client Intake Form</h1>
+
+    <div class="tabs">
+      <div class="tab active">Client Details</div>
+      
+    </div>
+
+    <form id="clientForm">
+      <div class="row">
+        <div>
+          <label>First Name</label>
+          <input type="text" id="firstName" required>
+          <div class="error" id="firstNameError"></div>
+        </div>
+        <div>
+          <label>Last Name</label>
+          <input type="text" id="lastName" required>
+          <div class="error" id="lastNameError"></div>
+        </div>
+      </div>
+
+      <label>Phone</label>
+      <input type="number" id="phone" maxlength="10" required>
+      <div class="error" id="phoneError"></div>
+
+      <label>Email</label>
+      <input type="email" id="email" required>
+      <div class="error" id="emailError"></div>
+
+      <label>Street Address</label>
+      <input type="text" id="street" required>
+      <div class="error" id="streetError"></div>
+
+      <label>Address Line 2</label>
+      <input type="text" id="address2">
+
+      <div class="row">
+        <div>
+          <label>City</label>
+          <input type="text" id="city" required>
+          <div class="error" id="cityError"></div>
+        </div>
+        <div>
+          <label>State/Region/Province</label>
+          <input type="text" id="state" required>
+          <div class="error" id="stateError"></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div>
+          <label>Postal / Zip Code</label>
+          <input type="text" id="zip" required>
+          <div class="error" id="zipError"></div>
+        </div>
+        <div>
+          <label>Country</label>
+          <input type="text" id="country" required>
+          <div class="error" id="countryError"></div>
+        </div>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("clientForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      let isValid = true;
+
+      // Reset all errors
+      document.querySelectorAll(".error").forEach(e => e.textContent = "");
+
+      // First name validation
+      const firstName = document.getElementById("firstName").value.trim();
+      if (firstName === "") {
+        document.getElementById("firstNameError").textContent = "First name is required";
+        isValid = false;
+      }
+
+      // Last name validation
+      const lastName = document.getElementById("lastName").value.trim();
+      if (lastName === "") {
+        document.getElementById("lastNameError").textContent = "Last name is required";
+        isValid = false;
+      }
+
+      // Phone validation
+      const phone = document.getElementById("phone").value.trim();
+      if (!/^\d{10}$/.test(phone)) {
+        document.getElementById("phoneError").textContent = "Enter a valid 10-digit phone number";
+        isValid = false;
+      }
+
+      // Email validation
+      const email = document.getElementById("email").value.trim();
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        document.getElementById("emailError").textContent = "Enter a valid email";
+        isValid = false;
+      }
+
+      // Street validation
+      const street = document.getElementById("street").value.trim();
+      if (street === "") {
+        document.getElementById("streetError").textContent = "Street address is required";
+        isValid = false;
+      }
+
+      // City validation
+      const city = document.getElementById("city").value.trim();
+      if (city === "") {
+        document.getElementById("cityError").textContent = "City is required";
+        isValid = false;
+      }
+
+      // State validation
+      const state = document.getElementById("state").value.trim();
+      if (state === "") {
+        document.getElementById("stateError").textContent = "State is required";
+        isValid = false;
+      }
+
+      // Zip validation
+      const zip = document.getElementById("zip").value.trim();
+      if (zip === "" || !/^\d{5,6}$/.test(zip)) {
+        document.getElementById("zipError").textContent = "Enter a valid ZIP code";
+        isValid = false;
+      }
+
+      // Country validation
+      const country = document.getElementById("country").value.trim();
+      if (country === "") {
+        document.getElementById("countryError").textContent = "Country is required";
+        isValid = false;
+      }
+
+      if (isValid) {
+        alert("Form validated successfully! Proceeding to next page...");
+        // Here you can redirect to the next section
+        // window.location.href = "next-page.html";
+      }
+    });
+  </script>
+</body>
+</html>

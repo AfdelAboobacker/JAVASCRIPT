@@ -1,0 +1,8 @@
+event is an action or occurence that happens in the browser.
+ex:user clicking a button ,form submission,mouse movement,keyboard key press etc.
+event listener:
+is a function in js that waits for an event to occur on html element.and then exicut code in responce.
+*is used make websit interactive.
+*to seperate html and js code.
+event handling:
+event handling means writing js code that will run when a spesific event occur.
