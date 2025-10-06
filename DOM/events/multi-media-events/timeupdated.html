@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <audio id="audioTimeupdate" controls> <source src="./mixkit-hip-hop-02-738 (1).mp3"></audio>
+    <p id="timeOut">current time:0</p>
+
+    <script>
+        const audioTimeupdate=document.getElementById("audioTimeupdate");
+        const timeOut=document.getElementById("timeOut");
+
+        audioTimeupdate.addEventListener("timeupdate",()=>{
+            timeOut.textContent="current time:"+audioTimeupdate.currentTime.toFixed(2);
+        })
+    </script>
+</body>
+</html>

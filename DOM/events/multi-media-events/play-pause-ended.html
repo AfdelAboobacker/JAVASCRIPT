@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>play pause ended events</h2>
+    <audio id="audiopalyer" controls> <source src="./mixkit-hip-hop-02-738 (1).mp3"></audio>
+    <p id="eventOutput">event will appear here</data></p>
+    <script>
+        const audio=document.getElementById("audiopalyer");
+        const output=document.getElementById("eventOutput");
+        // play event
+        audio.addEventListener("play",()=>{
+            output.textContent="play event fired!!";
+            console.log("play event fired");
+            
+        })
+        // puase event
+        audio.addEventListener("pause",()=>{
+            output.textContent="pause event fired!!";
+            console.log("pause event fired");
+            
+        })
+
+        // ended event
+        audio.addEventListener("ended",()=>{
+          output.textContent="ended event fired";
+          console.log("ended event fired");
+          
+            
+        })
+
+    </script>
+</body>
+</html>
